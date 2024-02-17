@@ -1,0 +1,10 @@
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let todo of todos">
+      <strong>{{todo.todoItem}}</strong>
+      <span class="float-right">
+        <button class="btn alert-primary mr-3"><strong>Edit</strong></button>
+        <button class="btn alert-danger" (click)="onDelete(todo.id)"><strong>Delete</strong></button>
+      </span>
+    </li>
+</ul>
