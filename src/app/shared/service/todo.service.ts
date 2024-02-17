@@ -25,7 +25,7 @@ export class todoService implements OnInit {
 
     onRemove(id: string) {
         console.log(id);
-        let getConfirm = confirm(`Are you sure want to delete`)
+        let getConfirm = confirm(`Are you sure you want to delete`)
         if (getConfirm) {
             let findTodo = this.todosArr.findIndex(todo => todo.id === id)
             console.log(findTodo);
