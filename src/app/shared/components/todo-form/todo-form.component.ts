@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UuidService } from '../../service/uuid.service';
 import { todoService } from '../../service/todo.service';
+import { CustomRegex } from '../../const/validation';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class TodoFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.addForm = new FormGroup({
-      todoItem: new FormControl()
+      todoItem: new FormControl(null, [Validators.required, Validators.pattern(CustomRegex.username)])
     })
   }
 

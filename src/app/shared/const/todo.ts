@@ -1,4 +1,4 @@
-import { ITodo } from "../model/todointerface";
+import { ITodo } from "../model/todoInter";
 
 export let todoArr : Array<ITodo> = [
     { todoItem: "Javascript", id: '1' },

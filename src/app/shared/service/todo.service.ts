@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from "@angular/core";
-import { ITodo } from "../model/todointerface";
-import { todoArr } from "../const/const";
+import { ITodo } from "../model/todoInter";
+import { todoArr } from "../const/todo";
 
 @Injectable({
     providedIn: "root"

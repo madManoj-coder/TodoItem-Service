@@ -3,10 +3,10 @@
         <form [formGroup]="addForm" (ngSubmit)="onTodoAdd()">
             <div class="form-group text-white">
                 <label for="todoitem"><strong>TodoItem</strong></label>
-                <input type="text" required formControlName="todoItem" class="form-control border">
+                <input type="text" formControlName="todoItem" class="form-control">
             </div>
             <div class="text-right">
-                <button class="btn alert-success"><strong>Add Todo</strong></button>
+                <button class="btn alert-success btn-success"><strong>Add Todo</strong></button>
             </div>
         </form>
     </div>
