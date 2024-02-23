@@ -36,6 +36,7 @@ export class StdFormComponent implements OnInit {
       this._stdService.addStd(obj);
       this.stdForm.reset();
     }
+
   }
 
 }
