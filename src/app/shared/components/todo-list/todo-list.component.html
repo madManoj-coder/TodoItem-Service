@@ -1,12 +1,19 @@
-
 <ul class="list-group" *ngIf="todos.length > 0">
-    <li class="list-group-item" *ngFor="let todo of todos">
-      <strong>{{todo.todoItem}}</strong>
-      <span class="float-right">
-        <button class="btn alert-primary btn-primary mr-3"><strong>Edit</strong></button>
-        <button class="btn alert-danger btn-danger" (click)="onDelete(todo.id)"><strong>Delete</strong></button>
-      </span>
-    </li>
+  <li class="list-group-item" *ngFor="let todo of todos">
+    <strong>{{todo.todoItem}}</strong>
+    <span class="float-right">
+      <!-- <button class="btn alert-primary btn-primary mr-3"><strong>Edit</strong></button> -->
+      
+      <button mat-mini-fab color="primary" class="mr-2" aria-label="Example icon button with a delete icon">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-mini-fab color="warn" (click)="onDelete(todo.id)" aria-label="Example icon button with a delete icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+
+      <!-- <button class="btn alert-danger btn-danger"><strong>Delete</strong></button> -->
+    </span>
+  </li>
 </ul>
 
 <p *ngIf="todos.length === 0" class="alert alert-danger">No Todo Item found !!!</p>

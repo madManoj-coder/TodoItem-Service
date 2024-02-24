@@ -8,6 +8,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { StdFormComponent } from './shared/components/std-form/std-form.component';
 import { StdTableComponent } from './shared/components/std-table/std-table.component';
 import { StdService } from './shared/service/std.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { StdService } from './shared/service/std.service';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSnackBarModule
   ],
   providers: [StdService],
   bootstrap: [AppComponent]

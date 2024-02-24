@@ -7,7 +7,8 @@
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Contact</th>
-                <th>Remove</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +19,16 @@
                 <td>{{std.email}}</td>
                 <td>{{std.contact}}</td>
                 <td>
-                    <button class="btn alert-danger btn-danger" (click)="onDelete(std.id)"><strong>Delete</strong></button>
+                    <!-- <i class="fa-solid fa-pen-to-square fa-2x"></i> -->
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </td>
+                <td>
+                    <!-- <i class="fa-solid fa-trash fa-2x"></i> -->
+                    <button mat-mini-fab color="warn" (click)="onDelete(std.id)" aria-label="Example icon button with a delete icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
                 </td>
             </tr>
         </tbody>
